@@ -47,17 +47,17 @@
               <label class="ml-2" for="">Lembre-se de mim</label>
             </div>
             <div>
-              <button button id="btn-login" class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Entrar</button>
+              <button type="submit" id="btn-login" class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Entrar</button>
             </div>
             <div class="text-[#E9E1D5] text-xl text-center mt-6">
-              <p>Não tem uma conta? <button id="btn-cadastro" class="text-[#AD8D23] cursor-pointer">Cadastre-se</button></p>
+              <p>Não tem uma conta? <button type="button" id="btn-cadastro" class="text-[#AD8D23] cursor-pointer">Cadastre-se</button></p>
             </div>
           </div>
         </form>
 
         <!-- cadastro -->
 
-        <form id="form-cadastro" onsubmit="handleLogin(event)" class="hidden mt-5">
+        <form id="form-cadastro" onsubmit="handleCadastro(event)" class="hidden mt-5">
           <div class="text-[#AD8D23] font-[inter]">
             <p class="text-[#AD8D23] font-[inter] text-2xl">Cadastro de acesso</p>
             <div class="mt-10 flex flex-col gap-1">
@@ -76,10 +76,10 @@
             </div>
 
             <div>
-              <button class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Cadastrar</button>
+              <button type="submit" class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Cadastrar</button>
             </div>
             <div class="text-[#E9E1D5] text-xl text-center mt-6">
-              <p>Volte para <button id="btn-volta_login" class="text-[#AD8D23] cursor-pointer">Login</button></p>
+              <p>Volte para <button type="button" id="btn-volta_login" class="text-[#AD8D23] cursor-pointer">Login</button></p>
             </div>
           </div>
         </form>

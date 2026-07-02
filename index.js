@@ -46,6 +46,7 @@ function handleLogin(event) {
   if (usuario) {
     window.location.href = "./dashboard.html";
   } else {
+    divSenha.remove(divSenha.lastChild)
     const alerta = document.createElement("p");
     alerta.textContent = "Email ou senha incorretos";
     alerta.classList.add("text-red-500");
