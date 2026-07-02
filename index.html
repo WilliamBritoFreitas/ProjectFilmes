@@ -1,49 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt_br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- Fonte  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet">
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
 
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet">
-
-
-
-
-
-
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" type="text/tailwindcss" href="style.css">
-</head>
+    <link rel="stylesheet" type="text/tailwindcss" href="style.css" />
+  </head>
 
-<body class="h-screen">
+  <body class="h-screen">
     <main class="h-screen flex">
-        <div class="relative w-1/2 bg-[url('./assets/Tela_sofa.png')] bg-no-repeat">
-            <div class="absolute mt-210 ml-54">
-                <h1 class="text-white text-8xl font-['Playwrite_ID'] font-bold">Filmes</h1>
-
-                <h2 class="text-white -mt-2 ml-38 text-4xl font-['Playwrite_ID']">por segundo</h2>
-
-            </div>
-            <p class="text-slate-400 text-sm">Faça login para gerenciar seus filmes</p>
-
-            <div>
-
-            </div>
-
-
+      <div class="relative w-1/2 bg-[url('./assets/Tela_sofa.png')] bg-cover">
+        <div class="absolute mt-180 mb-20 ml-54">
+          <h1 class="text-white text-8xl font-['Playwrite_ID'] font-bold">Filmes</h1>
+          <h2 class="text-white -mt-2 ml-38 text-4xl font-['Playwrite_ID']">por segundo</h2>
         </div>
-
+      </div>
+      <div class="bg-[#16130C] relative w-1/2 flex flex-col items-center pt-20">
+        <div class="mt-30 text-[#AD8D23] font-[inter]">
+          <p class="text-[#AD8D23] font-[inter] text-2xl">Faça login para gerenciar seus filmes</p>
+          <form onsubmit="" id="form_login" class="mt-5">
+            <div class="flex flex-col gap-1">
+              <label class="text-[#E9E1D5]" for="email font-bold">E-mail</label>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="email" name="email" id="emailLogin" placeholder="seunome@fps.com" />
+            </div>
+            <div class="flex flex-col gap-1 mt-6">
+              <label class="text-[#E9E1D5]" for="senha">Senha</label>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="password" name="senha" id="senhaLogin" />
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
-
-</body>
-
+    <section>
+      <div></div>
+    </section>
+  </body>
 </html>
