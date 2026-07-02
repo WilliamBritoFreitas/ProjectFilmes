@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+
+  --font-playwrite: 'Playwrite ID', cursive;
+
+   --font-inter: "Inter", sans-serif;
+}
