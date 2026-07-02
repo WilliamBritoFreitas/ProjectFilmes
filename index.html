@@ -9,9 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
-
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" type="text/tailwindcss" href="style.css" />
@@ -20,29 +18,77 @@
   <body class="h-screen">
     <main class="h-screen flex">
       <div class="relative w-1/2 bg-[url('./assets/Tela_sofa.png')] bg-cover">
-        <div class="absolute mt-180 mb-20 ml-54">
-          <h1 class="text-white text-8xl font-['Playwrite_ID'] font-bold">Filmes</h1>
-          <h2 class="text-white -mt-2 ml-38 text-4xl font-['Playwrite_ID']">por segundo</h2>
+        <div class="flex absolute mt-130 mb-20 ml-24">
+          <!-- <h1 class="text-white text-8xl font-['Playwrite_ID'] font-bold">Filmes</h1>
+        <h2 class="text-white -mt-2 ml-38 text-4xl font-['Playwrite_ID']">por segundo</h2> -->
+          <h1 class="text-[#E9E1D5] text-9xl font-[inter] font-black">24</h1>
+          <h2 class="text-[#AD8D23] mt-7 text-5xl font-['Playwrite_ID']">fps</h2>
         </div>
       </div>
-      <div class="bg-[#16130C] relative w-1/2 flex flex-col items-center pt-20">
-        <div class="mt-30 text-[#AD8D23] font-[inter]">
-          <p class="text-[#AD8D23] font-[inter] text-2xl">Faça login para gerenciar seus filmes</p>
-          <form onsubmit="" id="form_login" class="mt-5">
-            <div class="flex flex-col gap-1">
-              <label class="text-[#E9E1D5]" for="email font-bold">E-mail</label>
+      <div class="bg-[#16130C] relative w-1/2 flex flex-col items-center pt-10">
+        <!-- Login -->
+
+        <form id="form-login" onsubmit="handleLogin(event)" class="mt-5">
+          <div class="text-[#AD8D23] font-[inter]">
+            <p class="text-[#AD8D23] font-[inter] text-2xl">Faça login para gerenciar seus filmes</p>
+            <div class="mt-10 flex flex-col gap-1">
+              <label class="text-[#E9E1D5]" for="email">Login|E-mail</label>
               <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="email" name="email" id="emailLogin" placeholder="seunome@fps.com" />
             </div>
             <div class="flex flex-col gap-1 mt-6">
-              <label class="text-[#E9E1D5]" for="senha">Senha</label>
+              <div id="div-senha" class="flex justify-between">
+                <label class="text-[#E9E1D5]" for="senha">Senha</label>
+                <button class="cursor-pointer">Esqueceu?</button>
+              </div>
               <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="password" name="senha" id="senhaLogin" />
             </div>
-          </form>
-        </div>
+            <div class="flex mt-3 items-center">
+              <input class="appearance-none w-5 h-5 bg-[#231F18] border border-[#4D4636] rounded checked:bg-[#AD8D23] checked:border-transparent cursor-pointer" type="checkbox" />
+              <label class="ml-2" for="">Lembre-se de mim</label>
+            </div>
+            <div>
+              <button button id="btn-login" class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Entrar</button>
+            </div>
+            <div class="text-[#E9E1D5] text-xl text-center mt-6">
+              <p>Não tem uma conta? <button id="btn-cadastro" class="text-[#AD8D23] cursor-pointer">Cadastre-se</button></p>
+            </div>
+          </div>
+        </form>
+
+        <!-- cadastro -->
+
+        <form id="form-cadastro" onsubmit="handleLogin(event)" class="hidden mt-5">
+          <div class="text-[#AD8D23] font-[inter]">
+            <p class="text-[#AD8D23] font-[inter] text-2xl">Cadastro de acesso</p>
+            <div class="mt-10 flex flex-col gap-1">
+              <label class="text-[#E9E1D5]" for="email">Nome</label>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="text" name="nome_usuario" id="emailLogin" placeholder="nome" />
+            </div>
+            <div class="flex flex-col gap-1 mt-6">
+              <label class="text-[#E9E1D5]" for="email">E-mail|Login</label>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="email" name="email" id="emailLogin" placeholder="seunome@fps.com" />
+            </div>
+            <div class="flex flex-col gap-1 mt-6">
+              <div class="flex justify-between">
+                <label class="text-[#E9E1D5]" for="senha">Senha</label>
+              </div>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="password" name="senha" id="senhaLogin" />
+            </div>
+
+            <div>
+              <button class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Cadastrar</button>
+            </div>
+            <div class="text-[#E9E1D5] text-xl text-center mt-6">
+              <p>Volte para <button id="btn-volta_login" class="text-[#AD8D23] cursor-pointer">Login</button></p>
+            </div>
+          </div>
+        </form>
       </div>
     </main>
     <section>
       <div></div>
     </section>
+
+    <script src="index.js"></script>
   </body>
 </html>
