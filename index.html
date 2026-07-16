@@ -16,13 +16,13 @@
   </head>
 
   <body class="h-screen">
-    <main class="h-screen flex">
-      <div class="relative w-1/2 bg-[url('./assets/Tela_sofa.png')] bg-cover">
-        <div class="flex absolute mt-130 mb-20 ml-24">
+    <main class="h-[1000px] flex bg-[#16130C]">
+      <div class="relative w-1/2 bg-[url('./assets/biblioteca.jpg')] bg-cover">
+        <div class="flex absolute mt-100 mb-20 ml-10">
           <!-- <h1 class="text-white text-8xl font-['Playwrite_ID'] font-bold">Filmes</h1>
         <h2 class="text-white -mt-2 ml-38 text-4xl font-['Playwrite_ID']">por segundo</h2> -->
-          <h1 class="text-[#E9E1D5] text-9xl font-[inter] font-black">24</h1>
-          <h2 class="text-[#AD8D23] mt-7 text-5xl font-['Playwrite_ID']">fps</h2>
+          <!-- <h1 class="text-[#E9E1D5] text-9xl font-[inter] font-black">A</h1> -->
+          <h2 class="text-[#16130C] mt-7 text-6xl font-['Playwrite_ID']">Estante</h2>
         </div>
       </div>
       <div class="bg-[#16130C] relative w-1/2 flex flex-col items-center pt-10">
@@ -47,7 +47,7 @@
               <label class="ml-2" for="">Lembre-se de mim</label>
             </div>
             <div>
-              <button type="submit" id="btn-login" class="mt-10 bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Entrar</button>
+              <button type="submit" id="btn-login" class="mt-10 cursor-pointer bg-[#AD8D23] w-full py-7 text-[#241A00] font-bold">Entrar</button>
             </div>
             <div class="text-[#E9E1D5] text-xl text-center mt-6">
               <p>Não tem uma conta? <button type="button" id="btn-cadastro" class="text-[#AD8D23] cursor-pointer">Cadastre-se</button></p>
@@ -57,22 +57,22 @@
 
         <!-- cadastro -->
 
-        <form id="form-cadastro" onsubmit="handleCadastro(event)" class="hidden mt-5">
+        <form id="form-cadastro" onsubmit="handleCadastro(event)" class="hidden mt-5 w-full max-w-md px-6">
           <div class="text-[#AD8D23] font-[inter]">
             <p class="text-[#AD8D23] font-[inter] text-2xl">Cadastro de acesso</p>
             <div class="mt-10 flex flex-col gap-1">
-              <label class="text-[#E9E1D5]" for="email">Nome</label>
-              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="text" name="nome_usuario" id="emailLogin" placeholder="nome" />
+              <label class="text-[#E9E1D5]" for="nomeCadastro">Nome</label>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="text" name="nome_usuario" id="nomeCadastro" placeholder="nome" />
             </div>
             <div class="flex flex-col gap-1 mt-6">
-              <label class="text-[#E9E1D5]" for="email">E-mail|Login</label>
-              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="email" name="email" id="emailLogin" placeholder="seunome@fps.com" />
+              <label class="text-[#E9E1D5]" for="emailCadastro">E-mail|Login</label>
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="email" name="email" id="emailCadastro" placeholder="seunome@fps.com" />
             </div>
             <div class="flex flex-col gap-1 mt-6">
               <div class="flex justify-between">
-                <label class="text-[#E9E1D5]" for="senha">Senha</label>
+                <label class="text-[#E9E1D5]" for="senhaCadastro">Senha</label>
               </div>
-              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="password" name="senha" id="senhaLogin" />
+              <input class="bg-[#231F18] px-4 py-7 border border-[#4D4636] rounded-xl" type="password" name="senha" id="senhaCadastro" />
             </div>
 
             <div>
@@ -86,7 +86,7 @@
       </div>
     </main>
     <section>
-      <div></div>
+      <div class="bg-black h-screen"></div>
     </section>
 
     <script src="index.js"></script>
