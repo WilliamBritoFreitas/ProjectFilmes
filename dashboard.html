@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Fonte  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playwrite+ID:wght@100..400&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="h-screen">
+    <header class="bg-[#AD8D23]">
+      <h1 class="text-[#16130C] mt-7 text-6xl font-['Playwrite_ID']">Estante</h1>
+      <form onsubmit="getBooks(event)">
+        <input type="text" name="busca" id="busca-input" placeholder="livro ou autor" />
+        <button class="pr-2" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </header>
+    <main class="h-[1000px] flex bg-[#16130C]"></main>
+    <section>
+      <div class="bg-black h-screen"></div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
